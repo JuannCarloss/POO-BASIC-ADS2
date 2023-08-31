@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class exercicio6 {
     public static void main(String[] args) {
         ArrayList<Double> numeros = new ArrayList<>();
+        ArrayList<Double> pares = new ArrayList<>();
         double maior = 0, menor = 999999999, media = 0, soma = 0;
-        int par = 0;
         for (int i=0; i<10; i++) {
             Double num = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite os valores a serem colocados no array", "numeros", JOptionPane.QUESTION_MESSAGE));
             numeros.add(num);
@@ -24,7 +24,7 @@ public class exercicio6 {
             }
 
             if (numeros.get(i)%2==0){
-
+                pares.add(numeros.get(i));
             }
         }
 
@@ -33,7 +33,7 @@ public class exercicio6 {
         System.out.println("maior: " + maior);
         System.out.println("menor: " + menor);
         System.out.println("media: " + media);
-        System.out.println("pares: " + par);
+        System.out.println("pares: " + pares);
 
     }
 }
