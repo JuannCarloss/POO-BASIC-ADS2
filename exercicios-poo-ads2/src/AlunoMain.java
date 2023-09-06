@@ -10,6 +10,19 @@ public class AlunoMain {
         Map<String, List<Integer>> disciplinas = new HashMap<>();
         List<Integer> notasMatematica = new ArrayList<>();
         List<Integer> notasPortugues = new ArrayList<>();
+        List<Boolean> frequencia = new ArrayList<>();
+
+        frequencia.add(true);
+        frequencia.add(true);
+        frequencia.add(true);
+        frequencia.add(true);
+        frequencia.add(true);
+        frequencia.add(true);
+        frequencia.add(true);
+        frequencia.add(false);
+        frequencia.add(false);
+        frequencia.add(false);
+
 
         aluno01.codigo = 123;
         aluno01.matricula = "321";
@@ -22,6 +35,7 @@ public class AlunoMain {
         aluno01.sexo = 'M';
         aluno01.peso = 72.0;
         aluno01.cpf = "9999";
+        aluno01.freq = frequencia;
 
 
         notasMatematica.add(10);
@@ -34,7 +48,11 @@ public class AlunoMain {
 
         aluno01.imprimirDadosAluno();
         aluno01.calcularMediaPorMaterial();
-        aluno01.calcularMediaGeral();
+
+
+        Boletim boletim = new Boletim();
+        System.out.println("o aluno " + aluno01.nome + " possui media de: " + aluno01.calcularMediaGeral());
+        System.out.println(boletim.verificaAlunoAprovado(aluno01.nome, aluno01.calcularFrequencia(), aluno01.calcularMediaGeral()));
 
     }
 }
