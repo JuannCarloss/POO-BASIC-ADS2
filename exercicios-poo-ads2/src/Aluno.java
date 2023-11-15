@@ -57,7 +57,7 @@ public class Aluno {
         public Integer calcularFrequencia() {
             Integer presenca = 0;
             for (Boolean frequencia : freq){
-                if (frequencia == true){
+                if (frequencia){
                     presenca++;
                 }
 
